@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    --padding-sides: 32px;
+    --color-accent: rgb(51, 128, 97);
+    --hover-color: rgb(43, 164, 115);
+}
+body {
+    display:flex;
+    height: 100vh;
+    background-color: rgb(250, 250, 250);
+}
+.image-section {
+    width:max(200px, 35vw);
+    height:100vh;
+    background-color: red;
+    position: relative;
+}
+.image-main {
+    width:inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.logo {
+    width:inherit;
+    position: absolute;
+    top:80px;
+    left:0;
+    padding:0 64px;
+    background-color: rgba(225, 225, 225, 0.6);
+}
+.image-section p {
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+
+}
+.image-section a {
+    text-decoration: none;
+    color: inherit;
+    color:rgb(19, 74, 168);
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+
+.content-section {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.header {
+    margin: 0 var(--padding-sides);
+    margin-bottom: 32px;
+}
+
+.inputs {
+    display:flex;
+    flex-direction: column;
+}
+
+.input-row {
+    display: flex;
+    gap:max(40px, 2vw);
+    width: fit-content;
+}
+.input-row:last-child {
+    position: relative; /* for displaying password does not match */
+}
+.input-row label {
+    margin-bottom: 4px;
+    font-size: 0.8rem;
+    color: rgb(65, 65, 65);
+    letter-spacing: 1px;
+}
+
+.input-container {
+    background-color: white;
+    padding: 32px var(--padding-sides);
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+    box-shadow: 0px 4px 12px rgb(173, 173, 173);
+}
+
+.input-container h2 {
+    margin-bottom: 8px;
+    letter-spacing: -0.8px;
+    font-size: 1.2rem;
+    color:rgb(84, 84, 84)
+}
+
+.content-section a {
+    text-decoration: none;
+    color: var(--color-accent);   
+}
+
+.content-section a:hover {
+    text-decoration: none;
+    color: var(--hover-color);
+}
+
+button {
+    background-color: var(--color-accent);
+    border: none;
+    color:white;
+    font-weight: bold;
+    padding: 14px 48px;
+    font-size: 1rem;
+    border-radius: 12px;
+    letter-spacing: -0.5px;
+    word-spacing: 2px;
+    cursor: pointer;
+    margin: 32px var(--padding-sides);
+}
+button:hover {
+    background-color: var(--hover-color);
+    transition: 200ms;
+}
+button:active {
+    opacity: 0.5;
+}
+button + p {
+    margin-left: var(--padding-sides);
+}
+
+input {
+    width: max(170px, 17vw);
+    padding:4px;
+    border-radius: 4px;
+    border: 1px solid rgb(195, 195, 195);
+    outline: none;
+    transition: 250ms;
+}
+input:focus {
+    box-shadow: 1px 1px 6px rgb(186, 186, 186);
+}
+input:valid {
+    border-color: green;
+    background-color: rgb(243, 255, 243);
+}
+
+input:focus:invalid {
+    border-color:red;
+}
+
+input::placeholder {
+    opacity: 0.5;
+    letter-spacing: 1px;
+}
